@@ -16,6 +16,8 @@ import fusioncharts from "./components/FusionCharts/fusioncharts";
 import Historical_current from "./components/historical/Historical_current";
 import Historical_voltage from "./components/historical/Historical_voltage";
 import Historical_temperature from "./components/historical/Historical_temperature";
+import Current_new from "./components/newValues/Current_new";
+import Voltage_new from "./components/newValues/Voltage_new";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -34,6 +36,8 @@ function App() {
             <Route path="historical_current" element={<Historical_current/>} component={Historical_current } />
             <Route path="historical_voltage" element={<Historical_voltage/>} component={Historical_voltage } />
             <Route path="historical_temperature" element={<Historical_temperature/>} component={Historical_temperature } />
+            <Route path="Current_new" element={<Current_new/>} component={Current_new} />
+            <Route path="Voltage_new" element={<Voltage_new/>} component={Voltage_new} />
             <Route path="transformers">
               <Route index element={<List />} />
               <Route

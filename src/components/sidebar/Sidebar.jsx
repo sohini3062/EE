@@ -62,8 +62,9 @@ const Sidebar = () => {
             <span>Historical Records</span></Link>
           </li>
           <li>
+            <Link to="/Current_new" style={{ textDecoration: "none" }}>
             <SettingsApplicationsIcon className="icon" />
-            <span>Current Stats</span>
+            <span>Current Stats</span></Link>
           </li>
            <p className="title">Voltage</p>
           <li>
@@ -71,12 +72,13 @@ const Sidebar = () => {
             <AccountCircleOutlinedIcon className="icon" />
             <span>Historical Records</span></Link>
           </li>
-          <Link to="/" style={{ textDecoration: "none" }}>
+          
           <li>
+            <Link to="/Voltage_new" style={{ textDecoration: "none" }}>
             <ExitToAppIcon className="icon" />
-            <span>Current Stats</span>
+            <span>Current Stats</span></Link>
           </li>
-          </Link>
+          
           <p className="title">Temperature</p>
           <li>
             <Link to="/Historical_temperature" style={{ textDecoration: "none" }}>
