@@ -34,7 +34,7 @@ const Sidebar = () => {
             <span>Dashboard</span>
           </li>
           </Link>
-          <p className="title">LISTS</p>
+          <p className="title">INFORMATION</p>
           <Link to="/transformers" style={{ textDecoration: "none" }}>
             <li>
               <PersonOutlineIcon className="icon" />
@@ -47,25 +47,52 @@ const Sidebar = () => {
               <span>Users</span>
             </li>
           </Link>
-          <p className="title">USEFUL</p>
-          <li>
-            <InsertChartIcon className="icon" />
-            <span>Stats</span>
-          </li>
+          <p className="title">ALERTS & STATS</p>
+          
           <li>
             <NotificationsNoneIcon className="icon" />
             <span>Notifications</span>
           </li>
-          <p className="title">SERVICE</p>
+          
+          <p className="title">CURRENT</p>
           <li>
+          <Link to="/Historical_current" style={{ textDecoration: "none" }}>
+
             <PsychologyOutlinedIcon className="icon" />
-            <span>Logs</span>
+            <span>Historical Records</span></Link>
           </li>
           <li>
+            <Link to="/Current_new" style={{ textDecoration: "none" }}>
             <SettingsApplicationsIcon className="icon" />
-            <span>Settings</span>
+            <span>Current Stats</span></Link>
           </li>
-          <p className="title">USER</p>
+           <p className="title">Voltage</p>
+          <li>
+            <Link to="/Historical_voltage" style={{ textDecoration: "none" }}>
+            <AccountCircleOutlinedIcon className="icon" />
+            <span>Historical Records</span></Link>
+          </li>
+          
+          <li>
+            <Link to="/Voltage_new" style={{ textDecoration: "none" }}>
+            <ExitToAppIcon className="icon" />
+            <span>Current Stats</span></Link>
+          </li>
+          
+          <p className="title">Temperature</p>
+          <li>
+            <Link to="/Historical_temperature" style={{ textDecoration: "none" }}>
+            <AccountCircleOutlinedIcon className="icon" />
+            <span>Historical Records</span>
+            </Link>
+          </li>
+          <Link to="/" style={{ textDecoration: "none" }}>
+          <li>
+            <ExitToAppIcon className="icon" />
+            <span>Current Stats</span>
+          </li>
+          </Link>
+           <p className="title">USER</p>
           <li>
             <AccountCircleOutlinedIcon className="icon" />
             <span>Profile</span>

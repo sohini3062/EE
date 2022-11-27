@@ -10,7 +10,7 @@ const Widget = ({ type }) => {
     case "user":
       data = {
         title: "Transformers",
-        isMoney: false,
+        isMoney: true,
         link: "See all transformers",
       };
       break;
@@ -44,7 +44,7 @@ const Widget = ({ type }) => {
       <div className="left">
         <span className="title">{data.title}</span>
         <span className="counter">
-          {data.isMoney} {10}
+          {data.isMoney} {3}
         </span>
         <span className="link">{data.link}</span>
       </div>
