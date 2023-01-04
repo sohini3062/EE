@@ -1,29 +1,28 @@
 import Home from "./pages/home/Home";
+import store from "./redux/store";
+import { Provider } from "react-redux";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import List from "./pages/list/List";
-import Single from "./pages/single/Single";
 import New from "./pages/new/New";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { productInputs, userInputs } from "./formSource";
-import { useContext } from "react";
-import { DarkModeContext } from "./context/darkModeContext";
-import "./style1.css";
 import Historical from "./components/historical/Historical_current"
 import ForgetPasswordPage from "./pages/ForgotPassword/ForgetPasswordPage";
-import fusioncharts from "./components/FusionCharts/fusioncharts";
 import Historical_current from "./components/historical/Historical_current";
 import Historical_voltage from "./components/historical/Historical_voltage";
 import Historical_temperature from "./components/historical/Historical_temperature";
 import Current_new from "./components/newValues/Current_new";
 import Voltage_new from "./components/newValues/Voltage_new";
+import SignUp from "./pages/register/Register";
+import Biodata from "./pages/Profile/Biodata";
 
 function App() {
-  const { darkMode } = useContext(DarkModeContext);
+  
 
   return (
-    <div className={darkMode ? "app dark" : "app"}>
+     <Provider store={store}>
       <BrowserRouter>
         <Routes>
           <Route path="/">
@@ -31,13 +30,14 @@ function App() {
             <Route path="dashboard" element={<Home/>} component={Home } />
             <Route path="login" element={<Login />} component={ Login } />
             <Route path="/forget-password" element={<ForgetPasswordPage/>} component={ForgetPasswordPage}/>
-            <Route path="register"element={<Register />} component={ Register } />
-            <Route path="data-visualization"  element={<fusioncharts/>} component={fusioncharts}/>
+            <Route path="register"element={<SignUp />} component={ SignUp } />
+            
             <Route path="historical_current" element={<Historical_current/>} component={Historical_current } />
             <Route path="historical_voltage" element={<Historical_voltage/>} component={Historical_voltage } />
             <Route path="historical_temperature" element={<Historical_temperature/>} component={Historical_temperature } />
             <Route path="Current_new" element={<Current_new/>} component={Current_new} />
             <Route path="Voltage_new" element={<Voltage_new/>} component={Voltage_new} />
+            <Route path="profile" element={<Biodata/>} component={Biodata} />
             <Route path="transformers">
               <Route index element={<List />} />
               <Route
@@ -48,7 +48,8 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </div>
+      </Provider>
+   
   );
 }
 
