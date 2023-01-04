@@ -4,7 +4,6 @@ import Datatable from "../../components/datatable/Datatable";
 import "./home.scss";
 import Widget from "../../components/widget/Widget";
 import { Calendar } from "react-calendar";
-import fusioncharts from "../../components/FusionCharts/fusioncharts";
 import { Button} from "@mui/material";
 import Historical_current from "../../components/historical/Historical_current";
 import Historical_voltage from "../../components/historical/Historical_voltage";
@@ -17,14 +16,14 @@ const Home = () => {
         <Navbar />
       
         <div className="widgets">
-          <Widget type="user" />
-          <Widget type="order" />
-          <Widget type="earning" />
-          <Widget type="balance" />
+          <Widget type="transformer" />
+          <Widget type="orders" />
+          <Widget type="alerts" />
+          <Widget type="users" />
         </div>
         <Datatable />
         
-        <fusioncharts />
+        
       </div>
     </div>
   );

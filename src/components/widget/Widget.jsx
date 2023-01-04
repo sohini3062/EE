@@ -1,37 +1,34 @@
 import "./widget.scss";
+import { userColumns, userRows } from "../../datatablesource";
 const Widget = ({ type }) => {
   let data;
 
-  //temporary
-  const amount = 100;
-  const diff = 20;
-
   switch (type) {
-    case "user":
+    case "transformer":
       data = {
         title: "Transformers",
-        isMoney: true,
+        isAvailable: true,
         link: "See all transformers",
       };
       break;
-    case "order":
+    case "alerts":
       data = {
         title: "Alerts",
-        isMoney: false,
+        isAvailable:true,
         link: "View all alerts",
       };
       break;
-    case "earning":
+    case "orders":
       data = {
         title: "Tranformers Ordered",
-        isMoney: true,
+        isAvailable:true,
         link: "Check Status",
       };
       break;
-    case "balance":
+    case "users":
       data = {
         title: "Users",
-        isMoney: true,
+        isAvailable:true,
         link: "See details",
       };
       break;
@@ -44,7 +41,7 @@ const Widget = ({ type }) => {
       <div className="left">
         <span className="title">{data.title}</span>
         <span className="counter">
-          {data.isMoney} {3}
+          {data.isAvailable} {userRows.length}
         </span>
         <span className="link">{data.link}</span>
       </div>
