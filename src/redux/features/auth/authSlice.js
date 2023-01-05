@@ -20,7 +20,7 @@ const authSlice = createSlice({
     },
     signIn(state, action) {
       const { payload } = action;
-      const { token, id, isAdmin, collegeName, isSuperAdmin } = payload;
+      const { token, id } = payload;
 
       state.token = token;
       state.isLoggedIn = true;

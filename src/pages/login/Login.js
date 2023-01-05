@@ -73,14 +73,15 @@ const Login = () => {
           dispatch(signIn(res.data));
           resetForm();
           dispatch(
-            addToast({ type: "success", message: "Successfully logged in!" })
+            addToast({ type: "success", message: "Successfully logged in!"
+          })
           );
         }
       })
       .catch((err) => {
         console.log(err);
         dispatch(setLoading(false));
-        dispatch(addToast({ type: "error", message: err.error }));
+        dispatch(addToast({ type: "error", message: "Invalid Credentials" }));
       });
   };
 
