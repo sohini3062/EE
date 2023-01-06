@@ -1,20 +1,47 @@
 import "./sidebar.scss";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
-import LocalShippingIcon from "@mui/icons-material/LocalShipping";
-import CreditCardIcon from "@mui/icons-material/CreditCard";
 import StoreIcon from "@mui/icons-material/Store";
 import InsertChartIcon from "@mui/icons-material/InsertChart";
 import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSystemDaydreamOutlined";
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import Container from "@mui/material/Container";
+import Button from "@mui/material/Button";
+import MenuItem from "@mui/material/MenuItem";
+import { useSelector, useDispatch } from "react-redux";
+import { NavLink } from "react-router-dom";
+
+import { addToast } from "../../redux/features/toast/toastSlice";
+import { useNavigate } from "react-router-dom";
+import { signOut } from "../../redux/features/auth/authSlice";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
+
+  const dispatch = useDispatch();
+  const { isLoggedIn} = useSelector(
+    (state) => state.auth
+  );
+  const handleLogout = () => {
+    if (isLoggedIn) {
+      dispatch(signOut());
+      dispatch(addToast({ type: "info", message: "You are logged out!" }));
+      navigate("/login");
+    }
+  };
 
   return (
     <div className="sidebar">
@@ -40,18 +67,10 @@ const Sidebar = () => {
               <span>Transformers</span>
             </li>
           </Link>
-          <Link to="/" style={{ textDecoration: "none" }}>
-            <li>
-              <StoreIcon className="icon" />
-              <span>Users</span>
-            </li>
-          </Link>
-          <p className="title">ALERTS & STATS</p>
           
-          <li>
-            <NotificationsNoneIcon className="icon" />
-            <span>Notifications</span>
-          </li>
+         
+          
+        
           
           <p className="title">CURRENT</p>
           <li>
@@ -92,18 +111,27 @@ const Sidebar = () => {
           </li>
           </Link>
            <p className="title">USER</p>
-          <Link to="/profile" style={{ textDecoration: "none" }}>
+          
           <li>
             <ExitToAppIcon className="icon" />
-            <span>Profile</span>
+             <span>Logout</span>
+            {isLoggedIn ? (
+              <Button
+              
+                onClick={handleLogout}
+              >
+                
+              </Button>
+            ) : (
+              <NavLink to="/login">
+               
+               Login
+                 
+                 
+              </NavLink>
+            )}
           </li>
-          </Link>
-          <Link to="/" style={{ textDecoration: "none" }}>
-          <li>
-            <ExitToAppIcon className="icon" />
-            <span>Logout</span>
-          </li>
-          </Link>
+          
         </ul>
       </div>
     </div>

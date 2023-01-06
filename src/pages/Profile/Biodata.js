@@ -93,7 +93,7 @@ function Biodata() {
       //   console.log("Im logged in!");
       setIsLoading(true);
       axios
-        .get(`${BASE_URL}users/profile`, configToken(token))
+        .get(`${BASE_URL}users/updateprofile`, configToken(token))
         .then((res) => {
           //   console.log(res.data);
           setIsLoading(false);
@@ -114,7 +114,7 @@ function Biodata() {
     console.log(postObj);
     setIsLoading(true);
     axios
-      .post(`${BASE_URL}users/updateprofile`, postObj, configToken(token))
+      .post(`${BASE_URL}users/profile`, postObj, configToken(token))
       .then((res) => {
         console.log(res.data);
         navigate("/");

@@ -17,9 +17,7 @@ const Home = () => {
       
         <div className="widgets">
           <Widget type="transformer" />
-          <Widget type="orders" />
-          <Widget type="alerts" />
-          <Widget type="users" />
+          
         </div>
         <Datatable />
         
