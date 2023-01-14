@@ -1577,6 +1577,11 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@kurkle/color@^0.3.0":
+  "integrity" "sha512-hW0GwZj06z/ZFUW2Espl7toVDjghJN+EKqyXzPSV8NV89d5BYp5rRMBJoc+aUN0x5OXDMeRQHazejr2Xmqj2tw=="
+  "resolved" "https://registry.npmjs.org/@kurkle/color/-/color-0.3.1.tgz"
+  "version" "0.3.1"
+
 "@mui/base@5.0.0-alpha.112":
   "integrity" "sha512-KPwb1iYPXsV/P8uu0SNQrj7v7YU6wdN4Eccc2lZQyRDW+f6PJYjHBuFUTYKc408B98Jvs1XbC/z5MN45a2DWrQ=="
   "resolved" "https://registry.npmjs.org/@mui/base/-/base-5.0.0-alpha.112.tgz"
@@ -3311,6 +3316,13 @@
   "integrity" "sha512-Y4kiDb+AM4Ecy58YkuZrrSRJBDQdQ2L+NyS1vHHFtNtUjgutcZfx3yp1dAONI/oPaPmyGfCLx5CxL+zauIMyKQ=="
   "resolved" "https://registry.npmjs.org/charcodes/-/charcodes-0.2.0.tgz"
   "version" "0.2.0"
+
+"chart.js@^4.1.1", "chart.js@^4.1.2":
+  "integrity" "sha512-9L1w6WLPq6ztiWVVOYtDtpo0CUsBKDWPrUEdwChAyzczaikqeSwNKEv3QpJ7EO4ICcLSi6UDVhgvcnUhRJidRA=="
+  "resolved" "https://registry.npmjs.org/chart.js/-/chart.js-4.1.2.tgz"
+  "version" "4.1.2"
+  dependencies:
+    "@kurkle/color" "^0.3.0"
 
 "check-types@^11.1.1":
   "integrity" "sha512-tzWzvgePgLORb9/3a0YenggReLKAIb2owL03H2Xdoe5pKcUyWRSEQ8xfCar8t2SIAuEDwtmx2da1YB52YuHQMQ=="
@@ -7835,6 +7847,11 @@
     "get-user-locale" "^1.2.0"
     "merge-class-names" "^1.1.1"
     "prop-types" "^15.6.0"
+
+"react-chartjs-2@^5.2.0":
+  "integrity" "sha512-98iN5aguJyVSxp5U3CblRLH67J8gkfyGNbiK3c+l1QI/G4irHMPQw44aEPmjVag+YKTyQ260NcF82GTQ3bdscA=="
+  "resolved" "https://registry.npmjs.org/react-chartjs-2/-/react-chartjs-2-5.2.0.tgz"
+  "version" "5.2.0"
 
 "react-circular-progressbar@^2.0.4":
   "integrity" "sha512-xp4THTrod4aLpGy68FX/k1Q3nzrfHUjUe5v6FsdwXBl3YVMwgeXYQKDrku7n/D6qsJA9CuunarAboC2xCiKs1g=="

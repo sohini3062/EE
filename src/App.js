@@ -23,6 +23,10 @@ import ToastList from "./components/ToastList";
 import { useDispatch, useSelector } from "react-redux";
 import { loadUser } from "./redux/features/auth/authSlice";
 
+import ChartPage from "./pages/ChartPage";
+import Chart from "./pages/chart/Chart";
+
+
 function App() {
 
   return (
@@ -44,6 +48,9 @@ function App() {
             <Route path="Current_new" element={<Current_new/>} component={Current_new} />
             <Route path="Voltage_new" element={<Voltage_new/>} component={Voltage_new} />
             <Route path="profile" element={<Biodata/>} component={Biodata} />
+            <Route path="chart" element={<ChartPage/>} component={ChartPage} />
+            
+           
             <Route path="transformers">
               <Route index element={<List />} />
               <Route

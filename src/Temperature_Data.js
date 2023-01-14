@@ -1,6 +1,7 @@
 export const userColumns = [
-  { field: "id", headerName: "ID", width: 70 },
-  {field: "transformer_id",headerName: "TRANSFORMER", width:230},
+  {field: "transformerId",headerName: "TRANSFORMER ID", width:230},
+  
+  
   
   {
     
@@ -9,30 +10,26 @@ export const userColumns = [
     renderCell: (params) => {
       return (
         <div className="cellWithImg">
-          {params.row.date}
+          {params.row.timeStamp}
         </div>
       );
     },
   },
   {
-    field: "value_top_oil",
-    headerName: "TOP OIL TEMPERATURE",
-    width: 230,
+    field: "topOilTemperatureC",
+    headerName: "TOP OIL TEMPERATURE(Celsius)",
+    width: 290,
   },
   {
-    field: "value_bottom_oil",
-    headerName: "BOTTOM OIL TEMPERATURE",
-    width: 230,
+    field: "bottomOilTemperatureC",
+    headerName: "BOTTOM OIL TEMPERATURE(Celsius)",
+    width: 290,
   },
-  {
-    field: "unit",
-    headerName: "Units",
-    width: 230,
-  },
+  
   {
     field: "humidity",
-    headerName: "HUMIDITY(%)",
-    width: 230,
+    headerName: "RELATIVE HUMIDITY",
+    width: 290,
   },
 ];
 
