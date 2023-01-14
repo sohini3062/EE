@@ -23,7 +23,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
-
+import BarChartIcon from '@mui/icons-material/BarChart';
 import { addToast } from "../../redux/features/toast/toastSlice";
 import { useNavigate } from "react-router-dom";
 import { signOut } from "../../redux/features/auth/authSlice";
@@ -67,7 +67,14 @@ const Sidebar = () => {
               <span>Transformers</span>
             </li>
           </Link>
+           
           
+          <li>
+          <Link to="/chart" style={{ textDecoration: "none" }}>
+
+            <BarChartIcon className="icon" />
+            <span>Charts</span></Link>
+          </li>
          
           
         
@@ -110,8 +117,13 @@ const Sidebar = () => {
             <span>Current Stats</span>
           </li>
           </Link>
-           <p className="title">USER</p>
-          
+          <p className="title">USER</p>
+          <Link to="/profile" style={{ textDecoration: "none" }}>
+          <li>
+            <ExitToAppIcon className="icon" />
+            <span>Profile</span>
+          </li>
+          </Link>
           <li>
             <ExitToAppIcon className="icon" />
              <span>Logout</span>
@@ -130,7 +142,7 @@ const Sidebar = () => {
                  
               </NavLink>
             )}
-          </li>
+          </li> 
           
         </ul>
       </div>

@@ -1,33 +1,60 @@
 export const userColumns = [
-  { field: "id", headerName: "ID", width: 70 },
-  {field: "transformer_id",headerName: "TRANSFORMER", width:230},
+ 
+  {field: "transformerId",headerName: "TRANSFORMER ID", width:230},
+  
+  {field: "timeStamp",headerName: "DATE", width:230},
+ 
+  {
+    field: "phaseCurR",
+    headerName: "PHASE CURRENT(R) (A)",
+    width: 230,
+  },
+  {
+    field: "phaseCurY",
+    headerName: "PHASE CURRENT(Y) (A)",
+    width: 230,
+  },
+  {
+    field: "phaseCurB",
+    headerName: "PHASE CURRENT(B) (A)",
+    width: 230,
+  },
+  {
+    field: "neutralCur",
+    headerName: "NEUTRAL CURRENT (A)",
+    width: 230,
+  },
+  {
+    field: "phaseVolR",
+    headerName: "PHASE VOLTAGE(R) (V)",
+    width: 230,
+  },
+  {
+    field: "phaseVolY",
+    headerName: "PHASE VOLTAGE(Y) (V)",
+    width: 230,
+  },
+  {
+    field: "phaseVolB",
+    headerName: "PHASE VOLTAGE(B) (V)",
+    width: 230,
+  },
   
   {
-    
-    headerName: "DATE",
-    width: 160,
-    renderCell: (params) => {
-      return (
-        <div className="cellWithImg">
-          {params.row.date}
-        </div>
-      );
-    },
+    field: "topOilTemperatureC",
+    headerName: "TOP OIL TEMPERATURE(Celsius)",
+    width: 290,
   },
   {
-    field: "value_ryb",
-    headerName: "RYB PHASE CURRENT",
-    width: 230,
+    field: "bottomOilTemperatureC",
+    headerName: "BOTTOM OIL TEMPERATURE(Celsius)",
+    width: 290,
   },
+  
   {
-    field: "value_neutral",
-    headerName: "NEUTRAL CURRENT",
-    width: 230,
-  },
-  {
-    field: "unit",
-    headerName: "Units",
-    width: 230,
+    field: "humidity",
+    headerName: "RELATIVE HUMIDITY",
+    width: 290,
   },
 ];
 
