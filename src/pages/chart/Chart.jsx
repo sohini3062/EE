@@ -115,7 +115,6 @@ const Humidity = {
     ],
   };
 const  current1= {
-  
     labels: time,
     datasets: [
       {
