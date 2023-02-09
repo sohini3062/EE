@@ -42,6 +42,17 @@ const Chart = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLoggedIn, token]);
 
+var sample=new Array();
+for(let i=0;i<Data.length;i++)
+{
+      sample.push(Data[i]);
+}
+
+Data.sort((a, b) => {
+    return a.timeStamp - b.timeStamp;
+});
+
+
 const time=Data.map((data) => data.timeStamp);
 const topOilTemp=Data.map((data) => data.topOilTemperatureC);
 const bottomOilTemp=Data.map((data)=> data.bottomOilTemperatureC);
