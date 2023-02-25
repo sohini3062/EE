@@ -1,6 +1,6 @@
 import "./historical_current.scss";
 import { userColumns, userRows } from "../../Current_Data.js";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid ,GridToolbar} from "@mui/x-data-grid";
 import { Link } from "react-router-dom";
 import { Grid } from "@mui/material";
 import { useState, useEffect } from "react";
@@ -58,6 +58,7 @@ const Historical_current = () => {
         rows={Data}
         columns={userColumns}
         pageSize={20}
+        components={{ Toolbar: GridToolbar }}
        
       />
     </div>

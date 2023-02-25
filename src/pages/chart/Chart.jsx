@@ -2,6 +2,7 @@
 import "./App.css";
 import { Grid } from "@mui/material";
 import { useState, useEffect } from "react";
+import { DataGrid ,GridToolbar} from "@mui/x-data-grid";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import CircularProgress from "@mui/material/CircularProgress";
@@ -154,10 +155,12 @@ const  current1= {
     
     <div className="App-header">
       <div style={{ width: 700 }}>
+       
         <LineChart chartData={temperatureTopOil} />
         <LineChart chartData={temperatureBottomOil}/>
         <LineChart chartData={current1}/>
         <LineChart chartData={Humidity}/>
+        
       </div>
      
     </div>
