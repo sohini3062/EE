@@ -25,6 +25,10 @@ import { loadUser } from "./redux/features/auth/authSlice";
 
 import ChartPage from "./pages/ChartPage";
 import Chart from "./pages/chart/Chart";
+import LandingPage_THV from "./THV/LandingPage_THV";
+import Login_THV from "./THV/Login_THV";
+import Register_THV from "./THV/Register_THV";
+import dashboard_THV from "./THV/dashboard_THV";
 
 
 function App() {
@@ -49,15 +53,28 @@ function App() {
             <Route path="Voltage_new" element={<Voltage_new/>} component={Voltage_new} />
             <Route path="profile" element={<Biodata/>} component={Biodata} />
             <Route path="chart" element={<ChartPage/>} component={ChartPage} />
-            
-           
-            <Route path="transformers">
+              <Route path="transformers">
               <Route index element={<List />} />
               <Route
                 path="new"
                 element={<New inputs={userInputs} title="Add New Transformer" />}
               />
             </Route>
+
+//the rest part here is for THV SITE
+            <Route
+                path="login_THV" element={<Login_THV/>} component={Login_THV}/>
+            <Route path="register_THV" element={<Register_THV />} component={ Register_THV } />
+            <Route path="dashboard_THV" element={<dashboard_THV />} component={ dashboard_THV } />
+            <Route path="/THV">
+              <Route index element={<LandingPage_THV />} />
+              
+              
+              
+            </Route>
+            
+           
+          
           </Route>
         </Routes>
       </BrowserRouter>
