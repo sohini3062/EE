@@ -1,24 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import "../../style1.css";
-import BackgroundImage from '../../assets/images/bg.jpg'
+import "../style1.css"
+import BackgroundImage from '../assets/images/thv.jpg'
 
-export default function LandingPage() {
+
+export default function LandingPage_THV() {
     return (
         <header style={ HeaderStyle }>
             <div className='container'>
-            <h1 className="main-title text-center">Welcome to TROD</h1>
+            <h1 className="main-title text-center">Welcome to Monitoring Site</h1>
             <p className="main-para text-center"></p>
             <div className="buttons text-center">
-                <Link to="/login">
+                <Link to="/login_THV">
                     <button className="primary-button">Log in</button>
                 </Link>
-                <Link to="/register">
+                <Link to="/register_THV">
                     <button className="primary-button" id="reg_btn">Register</button>
                 </Link>
-                <Link to="/THV">
-                    <button className="primary-button" id="reg_btn">THV Site</button>
-                </Link>
+                
                 </div>
             </div>
         </header>
@@ -32,4 +31,5 @@ const HeaderStyle = {
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
+    
 }
