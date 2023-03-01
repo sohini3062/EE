@@ -54,7 +54,7 @@ const Sidebar_THV = () => {
       <div className="center">
         <ul>
           <p className="title">MAIN</p>
-          <Link to="/dashboard" style={{ textDecoration: "none" }}>
+          <Link to="/dashboard_THV" style={{ textDecoration: "none" }}>
           <li>
             <DashboardIcon className="icon" />
             <span>Dashboard</span>
@@ -63,53 +63,38 @@ const Sidebar_THV = () => {
           <p className="title">TABLES</p>          
           
           <li>
-          <Link to="/chart" style={{ textDecoration: "none" }}>
+          <Link to="/data_th" style={{ textDecoration: "none" }}>
 
             <BarChartIcon className="icon" />
-            <span>Charts</span></Link>
+            <span>Temperature & Humidity</span></Link>
+          </li>
+           <li>
+          <Link to="/vibration" style={{ textDecoration: "none" }}>
+
+            <BarChartIcon className="icon" />
+            <span>Vibration</span></Link>
+          </li>
+         <p className="title">Charts</p>          
+          
+          <li>
+          <Link to="/chart_th" style={{ textDecoration: "none" }}>
+
+            <BarChartIcon className="icon" />
+            <span>Temperature & Humidity Charts</span></Link>
+          </li>
+           <li>
+          <Link to="/vibration_chart" style={{ textDecoration: "none" }}>
+
+            <BarChartIcon className="icon" />
+            <span>Vibration Charts</span></Link>
           </li>
          
           
         
           
-          <p className="title">CURRENT</p>
-          <li>
-          <Link to="/Historical_current" style={{ textDecoration: "none" }}>
-
-            <PsychologyOutlinedIcon className="icon" />
-            <span>Historical Records</span></Link>
-          </li>
-          <li>
-            <Link to="/Current_new" style={{ textDecoration: "none" }}>
-            <SettingsApplicationsIcon className="icon" />
-            <span>Current Stats</span></Link>
-          </li>
-           <p className="title">Voltage</p>
-          <li>
-            <Link to="/Historical_voltage" style={{ textDecoration: "none" }}>
-            <AccountCircleOutlinedIcon className="icon" />
-            <span>Historical Records</span></Link>
-          </li>
           
-          <li>
-            <Link to="/Voltage_new" style={{ textDecoration: "none" }}>
-            <ExitToAppIcon className="icon" />
-            <span>Current Stats</span></Link>
-          </li>
-          
-          <p className="title">Temperature</p>
-          <li>
-            <Link to="/Historical_temperature" style={{ textDecoration: "none" }}>
-            <AccountCircleOutlinedIcon className="icon" />
-            <span>Historical Records</span>
-            </Link>
-          </li>
-          <Link to="/" style={{ textDecoration: "none" }}>
-          <li>
-            <ExitToAppIcon className="icon" />
-            <span>Current Stats</span>
-          </li>
-          </Link>
+     
+         
           <p className="title">USER</p>
           <Link to="/profile" style={{ textDecoration: "none" }}>
           <li>
@@ -128,7 +113,7 @@ const Sidebar_THV = () => {
                 
               </Button>
             ) : (
-              <NavLink to="/login">
+              <NavLink to="/login_THV">
                
                Login
                  
@@ -143,4 +128,4 @@ const Sidebar_THV = () => {
   );
 };
 
-export default Sidebar;
+export default Sidebar_THV;
