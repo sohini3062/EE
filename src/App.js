@@ -28,7 +28,9 @@ import Chart from "./pages/chart/Chart";
 import LandingPage_THV from "./THV/LandingPage_THV";
 import Login_THV from "./THV/Login_THV";
 import Register_THV from "./THV/Register_THV";
-import dashboard_THV from "./THV/dashboard_THV";
+import Dashboard_THV from "./THV/dashboard_THV";
+import TempData from "./THV/data_th";
+import Chart_th from "./THV/chart_th";
 
 
 function App() {
@@ -62,16 +64,16 @@ function App() {
             </Route>
 
 //the rest part here is for THV SITE
-            <Route
-                path="login_THV" element={<Login_THV/>} component={Login_THV}/>
+            <Route path="chart_th" element={<Chart_th/>} component={ Chart_th } />
+            <Route path="/data_th" element={<TempData />} component={TempData} />
+            <Route path="login_THV" element={<Login_THV/>} component={Login_THV}/>
             <Route path="register_THV" element={<Register_THV />} component={ Register_THV } />
-            <Route path="dashboard_THV" element={<dashboard_THV />} component={ dashboard_THV } />
-            <Route path="/THV">
-              <Route index element={<LandingPage_THV />} />
+            <Route path="dashboard_THV" element={<Dashboard_THV />} component={ Dashboard_THV } />
+            <Route path="/THV" index element={<LandingPage_THV />} />
               
               
               
-            </Route>
+        
             
            
           
