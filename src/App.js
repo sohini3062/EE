@@ -31,7 +31,8 @@ import Register_THV from "./THV/Register_THV";
 import Dashboard_THV from "./THV/dashboard_THV";
 import TempData from "./THV/data_th";
 import Chart_th from "./THV/chart_th";
-
+import Chart_vibration from "./THV/chart_vibration";
+import TempDataV from "./THV/data_vibration";
 
 function App() {
 
@@ -65,11 +66,13 @@ function App() {
 
 //the rest part here is for THV SITE
             <Route path="chart_th" element={<Chart_th/>} component={ Chart_th } />
+            <Route path="/data_vibration" element={<TempDataV/>} component={TempDataV} />
             <Route path="/data_th" element={<TempData />} component={TempData} />
             <Route path="login_THV" element={<Login_THV/>} component={Login_THV}/>
             <Route path="register_THV" element={<Register_THV />} component={ Register_THV } />
             <Route path="dashboard_THV" element={<Dashboard_THV />} component={ Dashboard_THV } />
             <Route path="/THV" index element={<LandingPage_THV />} />
+            <Route path="chart_vibration" element={<Chart_vibration/>} component={ Chart_vibration } />
               
               
               

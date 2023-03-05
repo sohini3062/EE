@@ -100,7 +100,7 @@ const Register_THV= () => {
               message: "Your account is created successfully!",
             })
           );
-          navigate("/login");
+          navigate("/login_THV");
         }
       })
       .catch((err) => {
