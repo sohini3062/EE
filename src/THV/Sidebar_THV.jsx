@@ -69,7 +69,7 @@ const Sidebar_THV = () => {
             <span>Temperature & Humidity</span></Link>
           </li>
            <li>
-          <Link to="/vibration" style={{ textDecoration: "none" }}>
+          <Link to="/data_vibration" style={{ textDecoration: "none" }}>
 
             <BarChartIcon className="icon" />
             <span>Vibration</span></Link>
@@ -83,7 +83,7 @@ const Sidebar_THV = () => {
             <span>Temperature & Humidity Charts</span></Link>
           </li>
            <li>
-          <Link to="/vibration_chart" style={{ textDecoration: "none" }}>
+          <Link to="/chart_vibration" style={{ textDecoration: "none" }}>
 
             <BarChartIcon className="icon" />
             <span>Vibration Charts</span></Link>
