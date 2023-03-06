@@ -1,39 +1,39 @@
 export const columns = [
   { field: 'id', headerName: 'ID', width: 90 },
   {
-    field: 'Date',
+    field: 'timeStamp',
     headerName: 'Date',
     value: Date,
     width: 250,
     editable: false,
   },
   {
-    field: 'Temperature',
+    field: 'temp',
     headerName: 'Temperature(Celsius)',
     width: 250,
     editable: false,
   },
   {
-    field: 'Humidity',
+    field: 'humidity',
     headerName: 'Humidity',
     width: 150,
     editable: false,
   },
   {
-    field: 'Vibrationx',
+    field: 'vibx',
     headerName: 'Vibration-X',
     width: 160,
   },
   {
-    field: 'Vibrationy',
+    field: 'viby',
     headerName: 'Vibration-Y',
     width: 160,
   },
   {
-    field: 'Vibrationz',
+    field: 'vibz',
     headerName: 'Vibration-Z',
     width: 160,
   }
    
 ];
-let currentDate = new Date().toJSON().slice(0, 10);
+
