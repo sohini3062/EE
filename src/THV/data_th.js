@@ -11,12 +11,12 @@ import { BASE_URL, configToken } from "../utils/api";
 import { addToast } from "../redux/features/toast/toastSlice";
 
 export const columns = [
-  { field: 'id', headerName: 'ID', width: 90 },
+  { field: 'id', headerName: 'ID', width: 250},
   {
     field: 'timeStamp',
     headerName: 'Date',
     value: Date,
-    width: 250,
+    width: 500,
     editable: false,
   },
   {
@@ -77,7 +77,12 @@ for(let i=0;i<Data.length;i++)
     values.push(sample);
 }
 
-console.log(sample);
+var sortedArray = Data.slice();
+sortedArray.sort((a, b) => new Date(b.timeStamp) - new Date(a.timeStamp));
+
+console.log(sortedArray);
+
+
   if (isLoading) {
     return (
       <Grid container spacing={1} justifyContent="center" sx={{ marginTop: 50 }}>
@@ -93,7 +98,7 @@ console.log(sample);
       </div>
       <DataGrid
         className="datagrid"
-        rows={Data}
+        rows={sortedArray}
         columns={columns}
         pageSize={20}
         components={{ Toolbar: GridToolbar }}
