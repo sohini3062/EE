@@ -53,13 +53,16 @@ Data.sort((a, b) => {
 });
 
 
+const updatedArray = Data.map((element) => ({
+  ...element,
+  date: new Date(element.timeStamp).toString().substring(0,24)
+}));
 
 
 
-
-const time=Data.map((data) => data.timeStamp);
-const temperature=Data.map((data) => data.temp);
-const humidity=Data.map((data)=> data.humidity);
+const time=updatedArray.map((data) => data.date);
+const temperature=updatedArray.map((data) => data.temp);
+const humidity=updatedArray.map((data)=> data.humidity);
 
 
 const temperatureChart = {
@@ -78,9 +81,12 @@ const temperatureChart = {
         ],
         borderColor: "black",
         borderWidth: 2,
+        padding: 150,
       },
     ],
   };
+
+
   const HumidityChart = {
   
     labels: time,
@@ -104,7 +110,7 @@ const temperatureChart = {
   return (
     
    
-      <div style={{ width: 700 }}>
+      <div style={{ width: 1200 }}>
        
         <LineChart chartData={temperatureChart} />
          <LineChart chartData={HumidityChart} />

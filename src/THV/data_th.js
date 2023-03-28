@@ -11,18 +11,18 @@ import { BASE_URL, configToken } from "../utils/api";
 import { addToast } from "../redux/features/toast/toastSlice";
 
 export const columns = [
-  { field: 'id', headerName: 'ID', width: 90 },
+  { field: 'id', headerName: 'ID', width: 400},
   {
-    field: 'timeStamp',
+    field: 'date',
     headerName: 'Date',
     value: Date,
-    width: 250,
+    width: 600,
     editable: false,
   },
   {
     field: 'temp',
     headerName: 'Temperature(Celsius)',
-    width: 250,
+    width: 300,
     editable: false,
   },
   {
@@ -77,7 +77,29 @@ for(let i=0;i<Data.length;i++)
     values.push(sample);
 }
 
-console.log(sample);
+
+
+//console.log(sortedArray);
+const updatedArray = Data.map((element) => ({
+  ...element,
+  date: new Date(element.timeStamp)
+}));
+
+updatedArray.sort((a, b) => {
+  const dateComparison = b.date.getTime() - a.date.getTime();
+  if (dateComparison !== 0) {
+    return dateComparison;
+  } else {
+    return (b.date.getSeconds() + (b.date.getMilliseconds() / 1000)) - 
+           (a.date.getSeconds() + (a.date.getMilliseconds() / 1000));
+  }
+});
+
+
+
+//console.log(sortedArray1);
+
+
   if (isLoading) {
     return (
       <Grid container spacing={1} justifyContent="center" sx={{ marginTop: 50 }}>
@@ -93,9 +115,9 @@ console.log(sample);
       </div>
       <DataGrid
         className="datagrid"
-        rows={Data}
+        rows={updatedArray}
         columns={columns}
-        pageSize={20}
+        pageSize={100}
         components={{ Toolbar: GridToolbar }}
        
       />
