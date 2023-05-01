@@ -19,11 +19,7 @@ export const userColumns = [
     headerName: "PHASE CURRENT(B) (A)",
     width: 230,
   },
-  {
-    field: "neutralCur",
-    headerName: "NEUTRAL CURRENT (A)",
-    width: 230,
-  },
+ 
   {
     field: "phaseVolR",
     headerName: "PHASE VOLTAGE(R) (V)",
@@ -42,20 +38,10 @@ export const userColumns = [
   
   {
     field: "topOilTemperatureC",
-    headerName: "TOP OIL TEMPERATURE(Celsius)",
+    headerName: "Temperature",
     width: 290,
   },
-  {
-    field: "bottomOilTemperatureC",
-    headerName: "BOTTOM OIL TEMPERATURE(Celsius)",
-    width: 290,
-  },
-  
-  {
-    field: "humidity",
-    headerName: "RELATIVE HUMIDITY",
-    width: 290,
-  },
+
 ];
 
 //temporary data
